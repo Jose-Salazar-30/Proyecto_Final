@@ -8,7 +8,7 @@ class Marca
 {
 private:
 	int id = 0;
-	string marca;
+	string marcas;
 
 	//constructor
 public:
@@ -16,16 +16,16 @@ public:
 
 	Marca(string mar, int i) {
 		id = i;
-		marca = mar;
+		marcas = mar;
 	};
 
 	//METODOS
 	//set (modificar)
 	void setId(int i) { id = i; }
-	void setMarca(string mar) { marca = mar; }
+	void setMarca(string mar) { marcas = mar; }
 	//get (mostrar)
 	int getId() { return id; }
-	string marca() { return marca; }
+	string marca() { return marcas; }
 
 	void crear() {
 		int q_estado;
@@ -35,7 +35,7 @@ public:
 
 		if (cn.getConectar()) {
 			string insertar =
-				"INSERT INTO marcas(marca) VALUES('" + marca + "')';";
+				"INSERT INTO marcas(marca) VALUES('" + marcas + "')';";
 			const char* i = insertar.c_str();
 			//ejecutamos el query
 			q_estado = mysql_query(cn.getConectar(), i);
@@ -87,7 +87,7 @@ public:
 		cn.abrirConexion();
 		string ii = to_string(id);
 		if (cn.getConectar()) {
-			string actualizar = "update marcas set = '" + marca + "' where id_marca = " + ii + "";
+			string actualizar = "update marcas set = '" + marcas + "' where id_marca = " + ii + "";
 			const char* i = actualizar.c_str();
 			q_estado = mysql_query(cn.getConectar(), i);
 			if (!q_estado) {
@@ -125,7 +125,7 @@ public:
 			cout << "---*Error en la conexion*---" << endl;
 		}
 		cn.cerrar_conexion();
-	}
+	};
 };
 
 

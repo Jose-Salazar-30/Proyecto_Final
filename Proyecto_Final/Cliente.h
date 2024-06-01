@@ -19,6 +19,64 @@ private:
 	string correo_electronico;
 	tm fecha_ingreso;
 
+public:
+	Cliente() {}
+
+	Cliente(string nom, string ape, string n, unsigned int gen, string tel, string correo, tm fi, int i);
+
+	// Setters and Getters
+	void setId(int i);
+	void setNombres(string nom);
+	void setApellidos(string ape);
+	void setNit(string n);
+	void setGenero(unsigned int gen);
+	void setTelefono(string tel);
+	void setCorreoElectronico(string correo);
+	void setFechaIngreso(tm fi);
+
+	int getId();
+	string getNombres();
+	string getApellidos();
+	string getNit();
+	unsigned int getGenero();
+	string getTelefono();
+	string getCorreoElectronico();
+	tm getFechaIngreso();
+
+	// CRUD Methods
+	void crear();
+	void leer();
+	void actualizar();
+	void borrar();
+
+	// Custom Methods
+	bool buscarPorNIT(string n);
+	bool validarNIT(string n);
+};
+
+
+
+/*#pragma once
+#include <mysql.h>
+#include <iostream>
+#include <string>
+#include <ctime>
+#include "ConexionBD.h"
+
+using namespace std;
+
+class Cliente
+{
+private:
+	int id = 0;
+	string nombres;
+	string apellidos;
+	string nit;
+	unsigned int genero : 1;
+	string telefono;
+	string correo_electronico;
+	tm fecha_ingreso;
+
 	//constructor
 public:
 	Cliente() {}
@@ -160,5 +218,8 @@ public:
 		}
 		cn.cerrar_conexion();
 	}
-};
 
+	bool buscarPorNIT(string n);
+	bool validarNIT(string n);
+};
+*/
