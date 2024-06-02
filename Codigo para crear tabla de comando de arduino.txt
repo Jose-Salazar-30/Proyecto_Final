@@ -3,3 +3,4 @@ CREATE TABLE comandos (
     comando VARCHAR(255) NOT NULL,
     accion VARCHAR(255) NOT NULL
 );
+
