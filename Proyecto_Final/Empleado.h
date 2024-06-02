@@ -156,7 +156,7 @@ public:
 		cn.abrirConexion();
 		string ii = to_string(id);
 		if (cn.getConectar()) {
-			string borrar = "DELETE FROM empleados WHERE idEmpleado = " + ii);
+			string borrar = "DELETE FROM empleados WHERE idEmpleado = " + ii;
 			const char* i = borrar.c_str();
 			q_estado = mysql_query(cn.getConectar(), i);
 			if (!q_estado) {

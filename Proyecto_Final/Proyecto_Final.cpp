@@ -11,7 +11,7 @@ void mostrarMenu() {
     cout << "4. Borrar Cliente" << endl;
     cout << "5. Buscar Cliente por NIT" << endl;
     cout << "6. Salir" << endl;
-    cout << "Seleccione una opción: ";
+    cout << "Seleccione una opcion: ";
 }
 
 int main() {
@@ -122,7 +122,7 @@ int main() {
             break;
 
         default:
-            cout << "Opción no válida." << endl;
+            cout << "Opción no valida." << endl;
         }
     } while (opcion != 6);
 
